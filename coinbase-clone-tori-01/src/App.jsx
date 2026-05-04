@@ -10,10 +10,12 @@ import SignUp from "./pages/SignUp";
 import Profile from "./pages/Profile";
 
 import ProtectedRoute from "./components/auth/ProtectedRoute";
+import WarningBanner from "./components/common/WarningBanner";
 
 function App() {
   return (
     <AuthProvider>
+      <WarningBanner />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />

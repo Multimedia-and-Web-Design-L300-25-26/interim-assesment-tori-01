@@ -98,9 +98,22 @@ export default function SignUp() {
 
       {step === 'type' ? (
         <div className="w-full max-w-lg bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-          <h1 className="text-[28px] font-semibold text-[#0a0b0d] mb-8 text-center leading-tight">
+          <h1 className="text-[28px] font-semibold text-[#0a0b0d] mb-4 text-center leading-tight">
             What kind of account are you creating?
           </h1>
+
+          {/* Demo note */}
+          <div
+            id="signup-demo-note-type"
+            className="mb-6 flex items-center justify-center gap-2 px-4 py-2.5 bg-amber-50 border border-amber-200 rounded-xl"
+          >
+            <svg className="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v4a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+            <p className="text-xs text-amber-700 font-medium text-center">
+              Demo app – do not use your real password.
+            </p>
+          </div>
           <div className="space-y-4">
             {accountTypes.map((type) => (
               <button
@@ -140,12 +153,25 @@ export default function SignUp() {
             Back
           </button>
 
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-4">
             <img src={selectedType.iconUrl} alt={selectedType.title} className="w-10 h-10" />
             <div>
               <h1 className="text-[24px] font-bold text-[#0a0b0d]">Create your {selectedType.title} account</h1>
               <p className="text-[14px] text-gray-500">{selectedType.description}</p>
             </div>
+          </div>
+
+          {/* Demo note */}
+          <div
+            id="signup-demo-note-form"
+            className="mb-5 flex items-center gap-2 px-4 py-2.5 bg-amber-50 border border-amber-200 rounded-xl"
+          >
+            <svg className="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v4a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+            <p className="text-xs text-amber-700 font-medium">
+              Demo app – do not use your real password.
+            </p>
           </div>
 
           {error && (
